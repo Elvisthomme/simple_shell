@@ -43,8 +43,6 @@ void _isatty(void)
 
 /**
  * main - main simple shell
- * @argc: number of arguments
- * @argv: list of command line arguments
  * Return: Always 0, -1 on error.
  */
 
