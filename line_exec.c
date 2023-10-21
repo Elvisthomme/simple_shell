@@ -2,9 +2,11 @@
 
 
 /**
- * splitstring - splits a string and makes it an array of pointers to words
+ * splitstring - splits a string free his allocated space
+ * and makes it an array of pointers to words
  * @str: the string to be split
  * @delim: the delimiter
+ *
  * Return: array of pointers to words
  */
 
@@ -44,6 +46,7 @@ char **splitstring(char *str, const char *delim)
 		wn++;
 	}
 	free(copy);
+	free(str);
 	return (array);
 }
 

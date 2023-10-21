@@ -60,7 +60,7 @@ int main(void)
 		_isatty();
 		len = getline(&buff, &size, stdin);
 		_EOF(len, buff);
-		arv = splitstring(buff, " \n");
+		arv = splitstring(trim(buff), " \n");
 		if (!arv || !arv[0])
 			execute(arv);
 		else
@@ -71,7 +71,6 @@ int main(void)
 			f = checkbuild(arv);
 			if (f)
 			{
-				free(buff);
 				f(arv);
 			}
 			else if (!pathname)
